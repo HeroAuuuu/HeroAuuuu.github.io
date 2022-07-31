@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Dawnight">
+
+
+
+
+
+<title>功能 | Dawnight</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Dawnight</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">更新日志</a>
+                
+                    <a class="menu-item" href="/function">功能</a>
+                
+                    <a class="menu-item" href="/state">状态</a>
+                
+                    <a class="menu-item" href="/download">下载</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Dawnight</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">更新日志</a>
+                
+                    <a class="menu-item" href="/function">功能</a>
+                
+                    <a class="menu-item" href="/state">状态</a>
+                
+                    <a class="menu-item" href="/download">下载</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    <article class="post-wrap page">
+        
+        <h2 class="post-title">功能</h2>
+        
+        <section class="post-content">
+            <h3 id="Dawn-For-The-Crew-2"><a href="#Dawn-For-The-Crew-2" class="headerlink" title="Dawn For The Crew 2"></a>Dawn For The Crew 2</h3><blockquote>
+<p>仅支持1920×1080分辨率，游戏设置为无边框或全屏</p>
+</blockquote>
+<ul>
+<li>不会被<strong>Battleye</strong>检测</li>
+<li>自动挂机刷人气与金钱</li>
+<li>预估累计用时、人气与金钱</li>
+<li>定时关机&#x2F;循环完毕自动关机</li>
+<li>累计运行时间</li>
+<li>循环数据统计<br /></li>
+</ul>
+<h3 id="Dawn-For-Company-of-Heroes-2"><a href="#Dawn-For-Company-of-Heroes-2" class="headerlink" title="Dawn For Company of Heroes 2"></a>Dawn For Company of Heroes 2</h3><ul>
+<li>解锁DLC（现支持解锁国家、战役）</li>
+<li>汉化安装<br /></li>
+</ul>
+<h3 id="Dawn-For-Apex-Legends"><a href="#Dawn-For-Apex-Legends" class="headerlink" title="Dawn For Apex Legends"></a>Dawn For Apex Legends</h3><blockquote>
+<p>仅支持无边框或全屏，安全性未测试</p>
+</blockquote>
+<ul>
+<li>自动挂机刷通行证与等级</li>
+<li>防踢出<br /></li>
+</ul>
+<h3 id="Nightmare-For-GTAV-Stand-Lua"><a href="#Nightmare-For-GTAV-Stand-Lua" class="headerlink" title="Nightmare For GTAV Stand Lua"></a>Nightmare For GTAV Stand Lua</h3><ul>
+<li>人物动画</li>
+<li>5种+全局崩溃</li>
+<li>16种不同模型的全局同步崩溃</li>
+<li>全面防护模式（会严重影响正常游戏，但基本上无法被其他人崩溃）</li>
+<li>载具警报</li>
+<li>载具改装预设</li>
+<li>载具反转控制</li>
+<li>摧毁最后一辆载具</li>
+<li>跳过佩里科岛前置（单人240万）</li>
+<li>传送到虎鲸抢劫面板</li>
+<li>移除佩里科岛排水管</li>
+<li>佩里科岛预设传送</li>
+<li>立即切开佩里科岛主要目标展柜</li>
+<li>8种脚本事件崩溃</li>
+<li>1种无效实体崩溃</li>
+<li>4种踢出（1种踢至线下）</li>
+<li>2种将玩家传送到佩里科岛（有过场与无过场）</li>
+<li>23种将玩家传送到仓库</li>
+<li>多种虚假通知与虚假邀请</li>
+<li>自定义NPC邀请</li>
+<li>杀死无敌玩家（对2Take1、Cherax生效）</li>
+<li>幽灵模式</li>
+</ul>
+
+        </section>
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Dawnight | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>

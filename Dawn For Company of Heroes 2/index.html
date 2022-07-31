@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Dawnight">
+
+
+
+
+
+<title>Dawn For Company of Heroes 2 更新日志 | Dawnight</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Dawnight</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">更新日志</a>
+                
+                    <a class="menu-item" href="/function">功能</a>
+                
+                    <a class="menu-item" href="/state">状态</a>
+                
+                    <a class="menu-item" href="/download">下载</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Dawnight</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">更新日志</a>
+                
+                    <a class="menu-item" href="/function">功能</a>
+                
+                    <a class="menu-item" href="/state">状态</a>
+                
+                    <a class="menu-item" href="/download">下载</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    var tocbot_timer;
+    var DEPTH_MAX = 6; // 为 6 时展开所有
+    var tocbot_default_config = {
+        tocSelector: '.tocbot-list',
+        contentSelector: '.post-content',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        orderedList: false,
+        scrollSmooth: true,
+        onClick: extend_click,
+    };
+
+    function extend_click() {
+        clearTimeout(tocbot_timer);
+        tocbot_timer = setTimeout(function() {
+            tocbot.refresh(obj_merge(tocbot_default_config, {
+                hasInnerContainers: true
+            }));
+        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
+    }
+
+    document.ready(function() {
+        tocbot.init(obj_merge(tocbot_default_config, {
+            collapseDepth: 1
+        }));
+    });
+
+    function expand_toc() {
+        var b = document.querySelector('.tocbot-toc-expand');
+        var expanded = b.getAttribute('data-expanded');
+        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
+        tocbot.refresh(obj_merge(tocbot_default_config, {
+            collapseDepth: expanded ? 1 : DEPTH_MAX
+        }));
+        b.innerText = expanded ? 'Expand all' : 'Collapse all';
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function obj_merge(target, source) {
+        for (var item in source) {
+            if (source.hasOwnProperty(item)) {
+                target[item] = source[item];
+            }
+        }
+        return target;
+    }
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">Dawn For Company of Heroes 2 更新日志</h1>
+            
+                <div class="post-meta">
+                    
+
+                    
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h3 id="1-3-3"><a href="#1-3-3" class="headerlink" title="1.3.3"></a>1.3.3</h3><ul>
+<li>优化内存占用<br><code>2021-12-26</code><br /></li>
+</ul>
+<h3 id="1-3-0"><a href="#1-3-0" class="headerlink" title="1.3.0"></a>1.3.0</h3><ul>
+<li>重新编写GUI</li>
+<li>优化了软件运行逻辑</li>
+<li>修复了部分光标错误</li>
+<li>新增了音乐播放器</li>
+<li><del>小彩蛋</del></li>
+<li>调整了部分界面的布局</li>
+<li>减少了不必要的延迟</li>
+<li>修复了当前分钟数小于10导致的时钟错误<br><code>2021-10-22</code><br /></li>
+</ul>
+<h3 id="1-2-1"><a href="#1-2-1" class="headerlink" title="1.2.1"></a>1.2.1</h3><ul>
+<li>修复了部分BUG</li>
+<li>优化调整</li>
+<li>新增了更新日志</li>
+<li>修复了部分错误<br><code>2021-10-07</code><br /></li>
+</ul>
+<h3 id="1-2-0"><a href="#1-2-0" class="headerlink" title="1.2.0"></a>1.2.0</h3><ul>
+<li>从新设计了UI界面</li>
+<li>更新了解锁DLC内容: 新增解锁战役阿登反击战、巴巴罗萨行动、蓝色方案、浴血斯大林格勒、南线攻势。</li>
+<li>新增了CPU检测</li>
+<li>新增了GPU检测</li>
+<li>新增了本机IP检测</li>
+<li>新增了计算机用户名检测</li>
+<li>新增了IE版本检测</li>
+<li>更新了时钟样式</li>
+<li>新增了快捷访问Steam和Relic</li>
+<li>重新设计了图标</li>
+<li>重新编写了源码</li>
+<li>新增了用户协议及隐私条款</li>
+<li>新增了软件详情页面</li>
+<li>删除了Steamdb快捷访问</li>
+<li>删除了DLC代码界面</li>
+<li>删除了多余的界面</li>
+<li>更改了安装成功提示页面<br><code>2021-10-07</code><br /></li>
+</ul>
+<h3 id="1-1-0"><a href="#1-1-0" class="headerlink" title="1.1.0"></a>1.1.0</h3><ul>
+<li>支持解锁全国家DLC</li>
+<li>汉化更新支持了4.0.24250版本</li>
+<li>快捷访问Steamdb</li>
+<li>修复了安装汉化后游戏出现“NO key”的情况</li>
+<li>优化了汉化安装的便捷性</li>
+<li>新增了一些程序保护</li>
+<li>新增了安装目录检测<br><code>2021-09-12</code></li>
+</ul>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/Dawn%20For%20The%20Crew%202/">Dawn For The Crew 2 更新日志</a>
+            
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Dawnight | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>
